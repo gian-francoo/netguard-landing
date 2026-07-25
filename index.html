@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NetGuard — Monitoreo de red en tiempo real</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="nav">
+    <div class="nav-inner">
+      <span class="logo">Net<span class="accent">Guard</span></span>
+      <span class="badge">Próximamente</span>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-inner">
+        <p class="eyebrow">// monitoreo de red en tiempo real</p>
+        <h1>Detecta problemas en tu red<br><span class="accent">antes de que te llame el jefe</span></h1>
+        <p class="subtitle">
+          NetGuard vigila tus dispositivos, alerta caídas y anomalías, y te avisa antes de que se convierta en un incidente. Únete a la lista de espera para acceso anticipado.
+        </p>
+
+        <form id="waitlistForm" class="form">
+          <input type="email" id="email" placeholder="tu-correo@ejemplo.com" required autocomplete="email">
+          <button type="submit" id="submitBtn">Unirme a la lista</button>
+        </form>
+        <p class="form-status" id="formStatus"></p>
+        <p class="form-note">Sin spam. Solo te avisamos cuando esté listo.</p>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="features">
+      <div class="features-inner">
+        <div class="feature">
+          <p class="feature-icon">◎</p>
+          <h3>Monitoreo en vivo</h3>
+          <p>Visualiza el estado de tus dispositivos de red al instante, sin recargar nada.</p>
+        </div>
+        <div class="feature">
+          <p class="feature-icon">▲</p>
+          <h3>Alertas inteligentes</h3>
+          <p>Notificaciones cuando algo se cae o se comporta distinto a lo normal.</p>
+        </div>
+        <div class="feature">
+          <p class="feature-icon">◈</p>
+          <h3>Historial y reportes</h3>
+          <p>Exporta reportes claros para justificar mejoras o detectar patrones.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA final -->
+    <section class="cta-final">
+      <h2>¿Listo para dejar de enterarte tarde?</h2>
+      <a href="#waitlistForm" class="cta-button">Reservar mi lugar</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>Proyecto educativo — landing page de práctica, NetGuard no es un producto real.</p>
+  </footer>
+
+  <script type="module" src="firebase-config.js"></script>
+  <script type="module" src="script.js"></script>
+</body>
+</html>
