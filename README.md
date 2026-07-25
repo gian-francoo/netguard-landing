@@ -72,12 +72,20 @@ Y abre `http://localhost:8080` en tu navegador.
 3. Se muestra un mensaje de confirmación o de error según el resultado
 4. Puedes ver los correos guardados entrando a **Firebase Console → Firestore Database → colección "waitlist"**
 
+## ✅ Evidencia de funcionamiento
+
+![Correo guardado en Firestore](images/firestore-data.png)
+
+Prueba real: al enviar el formulario, el correo queda guardado en la colección `waitlist` de Firestore junto con la fecha de registro (`createdAt`), confirmando que la conexión frontend-backend funciona de extremo a extremo.
+
 ## 📚 Qué aprendí
 
 - Cómo conectar un formulario HTML simple a una base de datos en la nube sin necesidad de programar un backend propio
 - La diferencia entre guardar datos en el navegador (que se pierden al cerrar la pestaña) y guardarlos de forma persistente en un servicio como Firestore
 - Cómo funcionan los ES Modules en JavaScript (`import`/`export`) y por qué requieren un servidor local para funcionar, a diferencia de un script tradicional
 - Manejo de estados de un formulario (enviando, éxito, error) para dar retroalimentación clara al usuario
+- Que mezclar distintas versiones del SDK de Firebase entre archivos (`firebase-app.js` y `firebase-firestore.js`) puede causar errores silenciosos difíciles de rastrear sin revisar la consola del navegador — la solución fue unificar la versión del SDK en todos los imports
+- Que los mensajes de error genéricos mostrados al usuario ("Algo salió mal") casi nunca son suficientes para depurar — la consola del navegador (F12) es la fuente real de información durante el desarrollo
 
 ## ⚠️ Nota de seguridad
 
